@@ -7,18 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Rabbitmq" />
-        <module name="Rabbitmq-simple" />
+        <module name="Rabbitmq-code" />
+        <module name="Rabbitmq-fanout" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Rabbitmq" target="11" />
-      <module name="Rabbitmq-simple" target="11" />
+      <module name="Rabbitmq-code" target="11" />
+      <module name="Rabbitmq-fanout" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Rabbitmq" options="-parameters" />
-      <module name="Rabbitmq-simple" options="-parameters" />
+      <module name="Rabbitmq-code" options="-parameters" />
+      <module name="Rabbitmq-fanout" options="-parameters" />
     </option>
   </component>
 </project>

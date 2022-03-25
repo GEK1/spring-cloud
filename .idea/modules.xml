@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Rabbitmq.iml" filepath="$PROJECT_DIR$/Rabbitmq.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Rabbitmq-simple/Rabbitmq-simple.iml" filepath="$PROJECT_DIR$/Rabbitmq-simple/Rabbitmq-simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rabbitmq-code/Rabbitmq-code.iml" filepath="$PROJECT_DIR$/Rabbitmq-code/Rabbitmq-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rabbitmq-simple/Rabbitmq-fanout.iml" filepath="$PROJECT_DIR$/Rabbitmq-simple/Rabbitmq-fanout.iml" />
     </modules>
   </component>
 </project>
