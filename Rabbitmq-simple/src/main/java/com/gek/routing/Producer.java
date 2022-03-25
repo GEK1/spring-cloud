@@ -1,12 +1,16 @@
-package com.gek.simple;
+package com.gek.routing;
 
-import com.rabbitmq.client.*;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
-public class Consumer {
-    private final static  String QUEUE_NAME="queue1";
+public class Producer{
+//    private final static  String QUEUE_NAME="queue1";
+    private final static  String EXCHANGE_NAME="fanout-exchange";
     public static void main(String[] args) {
 //        创建连接工程
         ConnectionFactory factory = new ConnectionFactory();
@@ -21,20 +25,21 @@ public class Consumer {
 //            创建连接connection
             connection = factory.newConnection();
 //            通过连接获取通道
-            channel = connection.createChannel();
-            channel.basicConsume(QUEUE_NAME, true, new DeliverCallback() {
-                @Override
-                public void handle(String s, Delivery message) throws IOException {
-                    System.out.println("收到消息是:" + new String(message.getBody(), "UTF-8"));
-                }
-            }, new CancelCallback() {
-                @Override
-                public void handle(String s) throws IOException {
-                    System.out.println("接收消息失败");
-                }
-            });
-            System.out.println("开始接收消息");
-            System.in.read();
+             channel = connection.createChannel();
+//            channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+//            通过创建交换机，声明队列，绑定关系，路由key,发送消息和接收消息
+//            channel.queueDeclare(QUEUE_NAME,false,false,false,null);
+            //准备消息内容
+            String message="Hello RabbitMQ";
+//            准备交换机
+//            String exchangName="fanout-exchange";
+//            定义路由key
+            String routeKey="";
+//            指定交换机类型
+            String type="fanout";
+            //发送消息给队列
+            channel.basicPublish(EXCHANGE_NAME,routeKey,null,message.getBytes("UTF-8"));
+            System.out.println("消息发送成功");
         } catch (Exception ex) {
             ex.printStackTrace();
         }finally {
