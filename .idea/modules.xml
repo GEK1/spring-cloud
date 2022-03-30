@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Rabbitmq.iml" filepath="$PROJECT_DIR$/Rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/Rabbitmq-code/Rabbitmq-code.iml" filepath="$PROJECT_DIR$/Rabbitmq-code/Rabbitmq-code.iml" />
       <module fileurl="file://$PROJECT_DIR$/Rabbitmq-simple/Rabbitmq-fanout.iml" filepath="$PROJECT_DIR$/Rabbitmq-simple/Rabbitmq-fanout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-rabbitmq/springboot-rabbitmq.iml" filepath="$PROJECT_DIR$/springboot-rabbitmq/springboot-rabbitmq.iml" />
     </modules>
   </component>
 </project>

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Rabbitmq" />
+        <module name="springboot-rabbitmq" />
         <module name="Rabbitmq-code" />
         <module name="Rabbitmq-fanout" />
       </profile>
@@ -15,6 +16,7 @@
       <module name="Rabbitmq" target="11" />
       <module name="Rabbitmq-code" target="11" />
       <module name="Rabbitmq-fanout" target="11" />
+      <module name="springboot-rabbitmq" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
