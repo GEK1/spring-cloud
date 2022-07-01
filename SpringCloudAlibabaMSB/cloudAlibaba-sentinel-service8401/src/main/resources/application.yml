@@ -1,0 +1,22 @@
+server:
+  port: 8401
+spring:
+  application:
+    name: cloud-sentinel-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #nacos注册中心
+    sentinel:
+      transport:
+#        配置sentinel dashboard地址
+        dashboard: 127.0.0.1:8080
+#        默认8719端口，键入被占用会自动8719+1，直到未被占用端口
+        port: 8719
+        # 默认将调用链路收敛，需要打开才可以进行链路流控
+      web-context-unify: false
+management:
+  endpoint:
+    web:
+      exposure:
+        include: '*'

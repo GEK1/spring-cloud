@@ -2,7 +2,7 @@ server:
   port: 9003
 spring:
   application:
-    name: server-provider9003
+    name: nacos-provider
   cloud:
     nacos:
       discovery:

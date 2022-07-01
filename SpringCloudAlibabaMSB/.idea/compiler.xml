@@ -6,21 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloudAlibab-Nacos-9002" />
+        <module name="cloudalibabaconsumernacos8083" />
         <module name="cloudAlibaba-Nacos-9001" />
+        <module name="cloudAlibab-Nacos-9002" />
+        <module name="CloudAlibaba-config-3377" />
+        <module name="cloudAlibaba-sentinel-service8401" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloudAlibab-Nacos-9002" target="1.8" />
+      <module name="CloudAlibaba-config-3377" target="1.8" />
       <module name="cloudAlibaba-Nacos-9001" target="1.8" />
+      <module name="cloudAlibaba-sentinel-service8401" target="1.8" />
+      <module name="cloudalibabaconsumernacos8083" target="1.8" />
       <module name="SpringCloudAlibabaMSB" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CloudAlibaba-config-3377" options="-parameters" />
       <module name="SpringCloudAlibabaMSB" options="-parameters" />
       <module name="cloudAlibab-Nacos-9002" options="-parameters" />
       <module name="cloudAlibaba-Nacos-9001" options="-parameters" />
+      <module name="cloudAlibaba-sentinel-service8401" options="-parameters" />
+      <module name="cloudalibabaconsumernacos8083" options="-parameters" />
     </option>
   </component>
 </project>

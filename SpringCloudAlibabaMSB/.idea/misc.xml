@@ -6,6 +6,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/cloudAlibaba-Nacos-9001/pom.xml" />
         <option value="$PROJECT_DIR$/cloudAlibab-Nacos-9002/pom.xml" />
+        <option value="$PROJECT_DIR$/cloudalibabaconsumernacos8083/pom.xml" />
+        <option value="$PROJECT_DIR$/CloudAlibaba-config-3377/pom.xml" />
+        <option value="$PROJECT_DIR$/cloudAlibaba-sentinel-service8401/pom.xml" />
       </list>
     </option>
   </component>

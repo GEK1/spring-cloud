@@ -3,20 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.13.RELEASE</version>
+        <groupId>com.gek</groupId>
+        <artifactId>SpringCloudAlibabaMSB</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <packaging>pom</packaging>
     <groupId>com.gek</groupId>
-    <artifactId>SpringCloudAlibabaMSB</artifactId>
+    <artifactId>cloudAlibaba-sentinel-service8401</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SpringCloudAlibabaMSB</name>
-    <description>SpringCloudAlibabaMSB</description>
+    <name>cloudAlibaba-sentinel-service8401</name>
+    <description>cloudAlibaba-sentinel-service8401</description>
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud-alibaba-version>2.2.5.RELEASE</spring-cloud-alibaba-version>
     </properties>
     <dependencies>
         <dependency>
@@ -24,10 +22,16 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+        <!-- sentinel依赖 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <version>2.2.5.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -38,18 +42,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring-cloud-alibaba-version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -58,12 +56,5 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>cloudAlibaba-Nacos-9001</module>
-        <module>cloudAlibab-Nacos-9002</module>
-        <module>cloudalibabaconsumernacos8083</module>
-        <module>CloudAlibaba-config-3377</module>
-        <module>cloudAlibaba-sentinel-service8401</module>
-    </modules>
 
 </project>
